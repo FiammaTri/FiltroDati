@@ -9,14 +9,26 @@ Obiettivo: Applicare i metodi sugli ArrayList per filtrare i dati in base a crit
 
 package main;
 
+import java.util.ArrayList;
+
 public class Prodotto {
 	String nome;
 	String categoria;
-	int prezzo;
+	double prezzo;
 	
-	public Prodotto(String nome, String categoria, int prezzo) {	//Creo costruttore
+	public Prodotto(String nome, String categoria, double prezzo) {	//Creo costruttore
 		this.nome = nome;
 		this.categoria = categoria;
 		this.prezzo = prezzo;
 	}
+	static void filtro(ArrayList<Prodotto> prodotti) { // filtro
+		for (Prodotto x : prodotti) { // per ogni elemento della classe Prodotto scorro l'arraylist prodotti
+			if (x.categoria.equals("elettronica")) { // se la categoria di un elemento corrisponde a "elettronica"
+														// stampa
+				System.out.println(x.nome);
+			}
+		}
+	}
+	
 }
+
